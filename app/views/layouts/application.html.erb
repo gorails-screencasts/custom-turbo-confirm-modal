@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ConfirmModal</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+    <dialog id="turbo-confirm">
+      <form method="dialog">
+        <p>Are you sure?</p>
+        <div>
+          <button value="cancel">Cancel</button>
+          <button value="confirm">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
