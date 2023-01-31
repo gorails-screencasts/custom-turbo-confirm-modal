@@ -13,14 +13,6 @@
   <body>
     <%= yield %>
 
-    <dialog id="turbo-confirm">
-      <form method="dialog">
-        <p>Are you sure?</p>
-        <div>
-          <button value="cancel">Cancel</button>
-          <button value="confirm">Confirm</button>
-        </div>
-      </form>
-    </dialog>
+    <%= render "shared/confirm" %>
   </body>
 </html>
